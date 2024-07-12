@@ -1,0 +1,6 @@
+[libraries]
+guava = "com.google.guava:guava:30.1.1-jre"
+junit = "junit:junit:4.13.2"
+
+[plugins]
+springBoot = "org.springframework.boot:spring-boot-gradle-plugin:2.5.2"

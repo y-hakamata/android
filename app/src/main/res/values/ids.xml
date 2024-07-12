@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="button_key_addition" type="id" />
+    <item name="button_key_subtraction" type="id" />
+    <item name="button_key_multiplication" type="id" />
+    <item name="nav_host_fragment" type="id" />
+</resources>

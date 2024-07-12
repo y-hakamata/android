@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="text_font_size_24sp">24sp</dimen>
+    <dimen name="padding_size_30dp">30dp</dimen>
+</resources>

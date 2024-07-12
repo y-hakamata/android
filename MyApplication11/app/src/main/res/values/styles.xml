@@ -1,0 +1,10 @@
+<resources>
+    <!-- ボタンのスタイル定義 -->
+    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_background_selector</item>
+        <item name="android:text">Button</item>
+        <!-- 他のスタイル属性をここに追加 -->
+    </style>
+
+    <style name="CommonButton"></style>
+</resources>

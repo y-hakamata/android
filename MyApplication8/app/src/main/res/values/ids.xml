@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="textView_result" type="id" />
+    <item name="button_key_clear" type="id" />
+    <item name="button_key_00" type="id" />
+    <item name="button_key_01" type="id" />
+    <item name="button_key_02" type="id" />
+    <item name="button_key_03" type="id" />
+    <item name="button_key_04" type="id" />
+    <item name="button_key_05" type="id" />
+    <item name="button_key_06" type="id" />
+    <item name="button_key_07" type="id" />
+    <item name="button_key_08" type="id" />
+    <item name="button_key_09" type="id" />
+    <item name="button_key_divide" type="id" />
+    <item name="button_key_multiplication" type="id" />
+    <item name="button_key_subtraction" type="id" />
+    <item name="button_key_addition" type="id" />
+    <item name="button_key_equal" type="id" />
+    <item name="bottom_navigation" type="id" />
+</resources>

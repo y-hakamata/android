@@ -1,0 +1,29 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 押された状態 -->
+    <item android:state_pressed="true" android:color="#FF03DAC5">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/button_pressed_color" />
+        </shape>
+    </item>
+
+    <!-- フォーカスされた状態 -->
+    <item android:state_focused="true" android:color="#FFFFFFFF">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFFFF" /> <!-- 押されたときの色を使用 -->
+        </shape>
+    </item>
+
+    <!-- 無効な状態 -->
+    <item android:state_enabled="false" android:color="#A9A9A9">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/button_disabled_color" />
+        </shape>
+    </item>
+
+    <!-- デフォルトの状態 -->
+    <item android:color="#FF6200EE">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/button_normal_color" />
+        </shape>
+    </item>
+</selector>

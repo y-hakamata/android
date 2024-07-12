@@ -1,0 +1,33 @@
+<resources>
+    <!-- ボタンのラベルに関する文字列リソース -->
+    <string name="textview_result_hint">数値を入力してください</string>
+    <string name="button_key_00">0</string>
+    <string name="button_key_01">1</string>
+    <string name="button_key_02">2</string>
+    <string name="button_key_03">3</string>
+    <string name="button_key_04">4</string>
+    <string name="button_key_05">5</string>
+    <string name="button_key_06">6</string>
+    <string name="button_key_07">7</string>
+    <string name="button_key_08">8</string>
+    <string name="button_key_09">9</string>
+    <string name="button_key_subtraction">-</string>
+    <string name="button_key_multiplication">*</string>
+    <string name="button_key_division">/</string>
+    <string name="button_key_equal">=</string>
+    <string name="button_key_clear">C</string>
+    <string name="button_key_divide">/</string>
+    <string name="button_key_addition">+</string>
+
+
+    <!-- アプリ名や画面タイトルなどの一般的な文字列リソース -->
+    <string name="app_name">My Application</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- 他の必要な一般的な文字列リソースを追加 -->
+
+    <!-- 数値を入力してくださいのヒント -->
+    <string name="input_hint">数値を入力してください</string>
+</resources>

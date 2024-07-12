@@ -1,0 +1,5 @@
+<!-- button_pressed.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/button_pressed_bg" android:state_pressed="true" />
+    <item android:drawable="@drawable/button_normal_bg" />
+</selector>
