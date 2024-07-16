@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textSize="24sp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:background="#E3E3E3"
+        android:hint="@string/textview_result_hint"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TableLayout
+        android:id="@+id/button_table_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <!-- 1行目 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <!-- cボタン -->
+            <Button
+                android:id="@+id/button_key_clear"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_span="4"
+                android:layout_marginStart="-885dp"
+                android:layout_marginEnd="-885dp"
+                android:text="@string/button_key_clear"
+                tools:ignore="VisualLintButtonSize" />
+        </TableRow>
+
+        <!-- 2行目 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <!-- 7ボタン -->
+            <Button
+                android:id="@+id/button_key_07"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="1dp"
+                android:text="@string/button_key_07"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <!-- 8ボタン -->
+            <Button
+                android:id="@+id/button_key_08"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:text="@string/button_key_08"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <!-- 9ボタン -->
+            <Button
+                android:id="@+id/button_key_09"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:text="@string/button_key_09"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <!-- ÷ボタン -->
+            <Button
+                android:id="@+id/button_key_division"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="7dp"
+                android:text="@string/button_key_division"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+        </TableRow>
+
+        <!-- 3行目 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <!-- 4ボタン -->
+            <Button
+                android:id="@+id/button_key_04"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="1dp"
+                android:text="@string/button_key_04"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <!-- 5ボタン -->
+            <Button
+                android:id="@+id/button_key_05"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:text="@string/button_key_05"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <!-- 6ボタン -->
+            <Button
+                android:id="@+id/button_key_06"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:text="@string/button_key_06"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <!-- xボタン -->
+            <Button
+                android:id="@+id/button_key_multiplication"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="7dp"
+                android:text="@string/button_key_multiplication"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+        </TableRow>
+
+        <!-- 4行目 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <!-- 1ボタン -->
+            <Button
+                android:id="@+id/button_key_01"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="1dp"
+                android:text="@string/button_key_01"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <!-- 2ボタン -->
+            <Button
+                android:id="@+id/button_key_02"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:text="@string/button_key_02"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <!-- 3ボタン -->
+            <Button
+                android:id="@+id/button_key_03"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:text="@string/button_key_03"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <!-- -ボタン -->
+            <Button
+                android:id="@+id/button_key_subtraction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="7dp"
+                android:text="@string/button_key_subtraction"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+        </TableRow>
+
+        <!-- 5行目 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <!-- 0ボタン -->
+            <Button
+                android:id="@+id/button_key_00"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="-13dp"
+                android:layout_weight="3"
+                android:background="@drawable/button_background"
+                android:text="@string/button_key_00"
+                android:textColor="#FFFFFF"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <!-- +ボタン -->
+            <Button
+                android:id="@+id/button_key_addition"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="1dp"
+                android:text="@string/button_key_addition"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+        </TableRow>
+
+        <!-- 6行目 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="end">
+
+            <!-- =ボタン -->
+            <Button
+                android:id="@+id/button_key_equal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="3dp"
+                android:text="@string/button_key_equal" />
+        </TableRow>
+    </TableLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_navmenu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="VisualLintBottomNav" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
