@@ -1,85 +1,59 @@
 package com.example.trainingapp
 
-import android.annotation.SuppressLint
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.widget.Button
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import com.example.trainingapp.fragments.FirstFragment
 import com.example.trainingapp.fragments.SecondFragment
 
-class SecondActivity : AppCompatActivity(), ConfirmDialogFragment.DialogListener {
+class SecondActivity : AppCompatActivity(), FirstFragment.OnNotifyFragmentListener, SecondFragment.OnNotifyFragmentListener {
 
-    companion object {
-        val TAG = SecondActivity::class.simpleName
-    }
-
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        // ダイアログ表示ボタンを取得する
-        val buttonShowDialog: Button = findViewById(R.id.button_show_dialog)
-        buttonShowDialog.setOnClickListener {
-            Log.i(TAG, "ダイアログ表示ボタンが押されました")
-            val dialog = ConfirmDialogFragment()
-            dialog.show(supportFragmentManager, "ConfirmDialogFragment")
+        // Viewの初期設定を行なう
+        initView()
+    }
+
+    /**
+     * Viewの初期設定を行なう.
+     */
+    private fun initView() {
+        // フラグメント１画面へボタンを取得する
+        val buttonChangeFragment1: Button = findViewById(R.id.button_change_fragment1)
+        // フラグメント２画面へボタンを取得する
+        val buttonChangeFragment2: Button = findViewById(R.id.button_change_fragment2)
+
+        // フラグメント１画面へボタンを押下時の処理
+        buttonChangeFragment1.setOnClickListener {
+            // フラグメントを管理するトランザクション機能を利用する
+            val transaction = supportFragmentManager.beginTransaction()
+            // レイアウトにfragmentの置換
+            transaction.replace(R.id.layout_fragment, FirstFragment.createInstance("fragment1"))
+            // バックスタックに追加
+            transaction.addToBackStack(null)
+            // フラグメントを画面に反映する
+            transaction.commit()
         }
 
-        // フラグメント1へ切り替えボタンを取得する
-        val buttonFragment1: Button = findViewById(R.id.button_fragment1)
-        buttonFragment1.setOnClickListener {
-            val fragment1 = FirstFragment.createInstance("Fragment 1")
-            replaceFragment(fragment1)
-            findViewById<TextView>(R.id.textview_second).visibility = View.GONE // 編集画面を非表示
-        }
-
-        // フラグメント2へ切り替えボタンを取得する
-        val buttonFragment2: Button = findViewById(R.id.button_fragment2)
-        buttonFragment2.setOnClickListener {
-            replaceFragment(SecondFragment())
-            findViewById<TextView>(R.id.textview_second).visibility = View.GONE // 編集画面を非表示
-        }
-
-        // 編集画面へボタンを取得する
-        val buttonEdit: Button = findViewById(R.id.button_change_edit)
-        buttonEdit.setOnClickListener {
-            // 編集画面へのアクティビティを開始する
-            val intent = Intent(this, EditActivity::class.java)
-            startActivity(intent)
+        // フラグメント２画面へボタンを押下時の処理
+        buttonChangeFragment2.setOnClickListener {
+            // フラグメントを管理するトランザクション機能を利用する
+            val transaction = supportFragmentManager.beginTransaction()
+            // レイアウトにfragmentの置換
+            transaction.replace(R.id.layout_fragment, SecondFragment.createInstance("fragment2"))
+            // バックスタックに追加
+            transaction.addToBackStack(null)
+            // フラグメントを画面に反映する
+            transaction.commit()
         }
     }
 
-    private fun replaceFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, fragment)
-            .addToBackStack(null)
-            .commit()
-    }
-
-    override fun onDialogPositiveClick() {
-        Log.i(TAG, "OKボタンが押されました")
-        // OKボタンが押されたときの処理
-        val intent = Intent(this, OkActivity::class.java)
-        startActivity(intent)
-    }
-
-    override fun onDialogNegativeClick() {
-        Log.i(TAG, "CANCELボタンが押されました")
-        // CANCELボタンが押されたときの処理
-        val intent = Intent(this, CancelActivity::class.java)
-        startActivity(intent)
-    }
-
-    override fun onDialogNeutralClick() {
-        Log.i(TAG, "後で通知ボタンが押されました")
-        // 後で通知ボタンが押されたときの処理
-        val intent = Intent(this, LaterNotificationActivity::class.java)
-        startActivity(intent)
+    /**
+     * イベント通知リスナーインターフェースのメソッドを実装.
+     */
+    override fun onClickChangeMain() {
+        finish()
     }
 }
